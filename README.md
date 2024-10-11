@@ -18,12 +18,13 @@ This boilerplate is designed specifically for developing React.js applications w
 
 ## Features
 
-- **Vite and Docker-based Development:** Vite provides a fast, optimized build process, and Docker ensures easy local development.
-- **Hot Module Reload (HMR):** Thanks to Vite, the React app supports HMR, though logs won't be printed in the terminal as Vite runs in the background in this setup.
+- **Vite and Docker-based Development:** Vite provides a fast, optimized development and build process, and Docker ensures easy local development.
+- **Hot Module Reload (HMR):** Thanks to Vite, the React app supports HMR, though logs won't be printed in the terminal since Vite runs in the background in this setup.
 - **Port Configuration:**
   - React app runs on **port 80** (default HTTP port).
   - PHP app runs on **port 81**.
   - This allows you to work on both React and PHP simultaneously in your local environment.
+  - Please note that this setup is for local development and not a typical/recommended production configuration.
 - **PHP as API Backend:** PHP is used only for developing APIs and **not for rendering PHP templates.**
 
 ## Requirements
@@ -74,7 +75,7 @@ To stop the running app:
 
 ## Deployment
 
-A basic FTP deployment script is included, but this method is not recommended for production environments using Docker. Ensure you configure the following variables in the ./deploy.sh script with your server and FTP credentials:
+A basic LFTP deployment script is included, but this method is not recommended for production environments using Docker. Ensure you configure the following variables in the ./deploy.sh script with your server and FTP credentials:
 
 ```
 REMOTE_USER="username@domain.com"
