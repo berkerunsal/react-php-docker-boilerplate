@@ -7,12 +7,11 @@ This boilerplate is designed specifically for developing React.js applications w
 - [Features](#features)
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
-  - [Initial Setup (First Time Only)](#initial-setup--first-time-only-)
-  - [Starting the App (Subsequent Runs)](#starting-the-app--subsequent-runs-)
+  - [Initial Setup](#initial-setup)
+  - [Starting the App](#starting-the-app)
   - [Stopping the App](#stopping-the-app)
 - [Deployment](#deployment)
   - [FTP Setup Notes](#ftp-setup-notes)
-  - [.htaccess Configuration](#htaccess-configuration)
   - [Production Folder Structure](#production-folder-structure)
 - [Notes](#notes)
 - [Contributing](#contributing)
@@ -37,7 +36,7 @@ Before starting, ensure you have the following installed:
 
 ## Getting Started
 
-### Initial Setup (First Time Only)
+### Initial Setup
 
 To start the application for the first time:
 
@@ -57,7 +56,7 @@ To start the application for the first time:
 This will install necessary Node modules, Vite, and then start the app.
 Visit [localhost](localhost) from your browser to see your app running.
 
-### Starting the App (Subsequent Runs)
+### Starting the App
 
 For subsequent runs, you can start the app without rebuilding:
 
@@ -91,25 +90,11 @@ PASSWORD="password"
 - Your FTP user must have access to /yourdomain.com for deployment.
 - Ensure your FTP server is properly configured to handle the app deployment.
 
-### .htaccess Configuration
-
-Add the following .htaccess file to serve the React app on production, ensuring all requests are routed to index.html:
-
-```
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . /index.html [L]
-</IfModule>
-```
 
 ### Production Folder Structure
 
 `dist/` folder: Contains your React app (production build).
+
 `api/` folder: Contains your PHP code for handling API requests.
 
 ## Notes
